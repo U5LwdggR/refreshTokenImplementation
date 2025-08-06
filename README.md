@@ -1,28 +1,37 @@
-//pre-requis
-rassurez vous d'avoir:
--node js
--le gestionnaire de dependance "npm" ou un autre
+1- Prérequis
+Avant de commencer, assurez-vous d’avoir installé :
 
-// demarrage du backend
--ouvrir le terminal
--deplacez vous vers testApi si vous n'etes pas deja a l'interieur
--executez la commande "node index.js"
--cela demarrera votre serveur express js
+- Node.js
+- Un gestionnaire de dépendances tel que npm ou yarn
 
-//demarrage du frontend
--ouvrir le terminal
--deplacez vous vers test-api-front qui se trouve dans testApi, si vous n'etes pas deja a l'interieur
--executez la commande "npm start"
--cela demarrera votre frontend react js
+2- Démarrage du projet
+  1.1- Backend (Express.js)
+- Ouvrez un terminal
+- Naviguez vers le dossier testApi si ce n’est pas déjà fait 
+- Lancez le serveur : "node index.js"
+- Cela démarre votre serveur Express.js
 
-//utilisation
--connectez vous via le formulaire avec les identifiants: -nom: admin
-                                                        -email: admin@gmail.com
-                                                        -mot de passe: admin123
-                                                        
--une fois connecte vous verrez la simulaition d'un compte a rebour ne vous fiez pas a ca c'est juste une simulation
--inspectez la page et allez dans la console
--normalement il ya un message de verification de rafraichissement de token chaque 5 ou 10 seconde qui s'affiche et quand l'accessToken expire il est rafraichi et cela vous le sera marque dans la console
 
-//Remarque
-NB: le temps d'expiration de l'access et du refresh token sont modifiable dans le backend
+  1.2- Frontend (React.js)
+- Ouvrez un nouveau terminal
+- Naviguez vers le dossier test-api-front situé à l’intérieur de testApi 
+- Lancez le projet React "npm start"
+- Cela démarre votre application frontend React.js
+
+3- Connexion et fonctionnement
+Accédez à l’application via le navigateur
+
+- Connectez-vous avec les identifiants suivants :
+
+	- Nom : admin
+	
+	- Email : admin@gmail.com
+	
+	- Mot de passe : admin123
+
+- Une fois connecté, vous verrez une simulation de compte à rebours (à ignorer, elle est uniquement illustrative)
+- Ouvrez la console du navigateur (F12 > onglet Console)
+- Vous devriez voir un message indiquant que le token est vérifié toutes les 5 à 10 secondes.
+- Lorsque l’accessToken expire, il est automatiquement rafraîchi et un message l’indique dans la console.
+
+4- Les durées d’expiration de l’accessToken et du refreshToken sont modifiables dans le backend selon vos besoins.
