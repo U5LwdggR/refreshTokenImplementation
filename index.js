@@ -1,22 +1,20 @@
 require("dotenv").config();
 const express = require("express");
 const jwt = require("jsonwebtoken");
-//const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const morgan = require("morgan"); // Import morgan
+const morgan = require("morgan");
 
 const app = express();
 app.use(express.json());
-//app.use(cookieParser());
 app.use(cors()); // autorise toutes les origines pour toutes les routes
 
 // Configuration du CORS
 const corsOptions = {
-  origin: "http://localhost:3000", // votre frontend React
+  origin: "http://localhost:3000", 
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true, // si vous utilisez les cookies ou l'authentification avec credentials
-  optionsSuccessStatus: 200, // certains clients aiment un code 200 plutôt que 204 sur OPTIONS
+  credentials: true, 
+  optionsSuccessStatus: 200, 
 };
 
 // Activer les logs HTTP avec morgan
@@ -70,7 +68,7 @@ app.post("/refresh", (req, res) => {
     return res.status(401).json({ message: "Unauthorized" });
   }
 
-  // Extraction du token depuis "Bearer <token>" si besoin
+  // Extraction du token depuis "Bearer <token>"
   const refreshToken = authHeader.startsWith("Bearer ")
     ? authHeader.slice(7)
     : authHeader;
